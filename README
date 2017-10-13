@@ -1,0 +1,14 @@
+介绍：一个jQuery的分页插件
+
+
+用法：
+ $.pagination({
+        pagination: '#pageA',//分页插件的容器
+        allcount: 100,      //总条数
+        count: 6,           //每页的个数
+        fn: logs            //一个函数，可以获取自己想要的内容
+ })
+ 
+ 
+ 
+ 
