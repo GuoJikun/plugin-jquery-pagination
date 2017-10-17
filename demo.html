@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+	    /*************分页************/
+        #pagination{
+            font-size: 0;
+            color: #333;
+            display: inline-block;
+        }
+        #pagination>span{
+            display: inline-block;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        #pagination>ul{
+            font-size: 0px;
+            display: inline-block;
+        }
+        #pagination>ul>li{
+            font-size: 14px;
+            display: inline-block;
+            padding: 4px 12px;
+            cursor: pointer;
+        }
+        .pagination-curr{
+            color: #28abe6;
+            cursor: auto;
+        }
+	</style>
+</head>
+<body>
+    <p id="content" style="color: red;">第1页</p>
+    <div id="pagination" class="page"></div>
+</body>
+<script src="jquery.min.js"></script>
+<script src="pagination.js"></script>
+<script>
+$.pagination({
+	pagination: '#pagination',
+    allcount: 100,  //总条数
+    count: 6,       //每次显示几页
+    fn: fnc         //回调，处理自己要出的逻辑
+})
+function fnc(index){
+    $('#content').text('第'+index+'页')
+}
+</script>
+</html>
